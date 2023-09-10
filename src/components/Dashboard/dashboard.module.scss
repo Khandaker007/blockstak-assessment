@@ -1,0 +1,11 @@
+@import '../../style/utils/base';
+
+.dashboard{
+    height: 20rem;
+    width: 100%;
+    background-color: greenyellow;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

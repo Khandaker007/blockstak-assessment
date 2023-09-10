@@ -1,0 +1,32 @@
+@import './utils/base';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @include response(lg-desktop) {
+    font-size: 55%;
+  }
+  @include response(M-desktop) {
+    font-size: 50%;
+  }
+  @include response(desktop) {
+    font-size: 47%;
+  }
+}
+
+body {
+//   font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+}

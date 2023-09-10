@@ -1,0 +1,11 @@
+@import '../../../style/utils/base';
+
+.sidebar{
+    height: 20rem;
+    width: 100%;
+    background-color: pink;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
