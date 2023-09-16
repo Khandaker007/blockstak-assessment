@@ -1,11 +1,117 @@
 @import '../../../style/utils/base';
 
 .navbar{
-    height: 20rem;
-    width: 100%;
-    background-color: orangered;
+  height: max-content;
+  width: 100%;
+  padding: 2rem 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .searchContainer{
+    flex: 1;
+
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: 2px solid $color-text-grey-light;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+
+    input{
+      font-size: 1.5rem;
+      color: $color-text-grey;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+
+      &::placeholder{
+        color: $color-text-grey-light;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    .icon{
+      font-size: 1.8rem;
+      color: $color-text-grey;
+      cursor: pointer;
+    }
+  }
+
+  .container{
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3rem;
+
+    .notiButton{
+      height: 2.8rem;
+      width: 2.5rem;
+      cursor: pointer;
+
+      .img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .menuButton{
+      padding: 0.5rem 1.5rem;
+      border-radius: 1.5rem;
+      background-color: $color-secondary;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .userImage{
+        height: 4.5rem;
+        width: 4.5rem;
+
+        .img{
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+      .userInfo{
+        .userName{
+          font-size: 1.3rem;
+          font-weight: 500;
+          line-height: 1.3;
+          margin-bottom: 0.5rem;
+        }
+        .userEmail{
+          font-size: 1.1rem;
+          color: $color-text-grey;
+          line-height: 1.3;
+        }
+      }
+      .dotButton{
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        margin-left: 2rem;
+
+        .dot{
+          display: block;
+          height: 0.3rem;
+          width: 0.3rem;
+          border-radius: 50%;
+          background-color: $color-text-grey;
+
+          display: flex;
+          gap: 2rem;
+        }
+
+      }
+    }
+  }
 }

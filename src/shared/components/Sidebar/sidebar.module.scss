@@ -1,8 +1,8 @@
 @import '../../../style/utils/base';
 
 .sidebar{
-    height: 20rem;
-    width: 100%;
+    height: 100%;
+    width: max-content;
     background-color: pink;
 
     display: flex;

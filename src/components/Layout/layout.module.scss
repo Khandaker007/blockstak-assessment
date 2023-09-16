@@ -1,0 +1,17 @@
+@import '../../style/utils/base';
+
+.layout{
+    display: grid;
+    grid-template-columns: [col-sidebar-start] max-content [col-sidebar-end col-main-start] 1fr [col-main-end];
+    grid-template-rows: repeat(2, [row-start] max-content [row-end]);
+
+    .navbarContainer{
+        grid-column: col-main-start / col-main-end;
+        grid-row: row-start 1 / row-end 1;
+    }
+    
+    .sidebarContainer{
+        grid-column: col-sidebar-start / col-sidebar-end;
+        grid-row: row-start 1 / row-end 2;
+    }
+}

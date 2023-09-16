@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { Navbar, Sidebar } from '@/shared/components';
-
 import '../style/globals.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Layout } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar/>
-        {children}
-        <Sidebar/>
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
