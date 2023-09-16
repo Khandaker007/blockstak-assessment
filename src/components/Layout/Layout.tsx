@@ -3,7 +3,9 @@ import React from 'react';
 import { Navbar, Sidebar } from '@/shared/components';
 
 import style from './layout.module.scss';
-const { layout, navbarContainer, sidebarContainer } = style;
+const {
+  layout, navbarContainer, sidebarContainer, mainContainer
+} = style;
 
 const Layout = ({
   children
@@ -15,7 +17,9 @@ const Layout = ({
       <div className={navbarContainer}>
         <Navbar/>
       </div>
-      {children}
+      <div className={mainContainer}>
+        {children}
+      </div>
       <div className={sidebarContainer}>
         <Sidebar/>
       </div>
