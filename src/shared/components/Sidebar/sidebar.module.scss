@@ -3,9 +3,56 @@
 .sidebar{
     height: 100%;
     width: max-content;
-    background-color: pink;
+    padding: 4rem 4.5rem;
+    border-right: 2px solid $color-text-grey-light;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .logoContainer{
+        height: 3.2rem;
+        margin-bottom: 7.5rem;
+
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .navList{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+
+        .navItem{
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: 600;
+            padding: 1.1rem 2.9rem;
+            border-radius: 1rem;
+            transition: all 300ms;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+
+            &:hover{
+                background-color: $color-secondary;
+                color: $color-primary;
+            }
+
+            .icon{
+                font-size: 2.2rem;
+            }
+        }
+
+        .logout:hover{
+            background-color: $color-red-light;
+            color: $color-white;
+        }
+    }
+    .divider{
+        height: 2px;
+        width: 100%;
+        background-color: $color-text-grey-light;
+        margin: 5rem 0;
+    }
 }
