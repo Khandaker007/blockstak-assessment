@@ -1,0 +1,47 @@
+@import '../../../style/utils/base';
+
+.convertCard{
+    background-color: $color-white;
+    padding: 3rem;
+    border-radius: 1.5rem;
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .title{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .optionButton{
+            background-color: $color-white;
+            border: 1px solid $color-text-grey-light;
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+
+            @include itemCenter();
+            
+            .icon{
+                font-size: 2rem;
+                color: $color-text-grey-light;                
+            }
+        }
+    }
+    .convertFrom{
+        margin-bottom: 2rem;
+    }
+    .convertTo{
+        margin-bottom: 2rem;        
+    }
+    .btnContainer{
+        margin-bottom: 1.5rem;
+    }
+    .text{
+        font-size: 1.2rem;
+        line-height: 1.3;
+        color: $color-text-grey;
+    }
+}

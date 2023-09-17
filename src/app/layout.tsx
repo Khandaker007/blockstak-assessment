@@ -2,10 +2,7 @@ import React from 'react';
 
 import '../style/globals.scss';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { Layout } from '@/components';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Layout>
           {children}
         </Layout>

@@ -1,0 +1,66 @@
+@import '../../../style/utils/base';
+
+.totalBalanceCard{
+    background-color: $color-white;
+    padding: 2.3rem;
+    border-radius: 1.2rem;
+    backdrop-filter: blur(100000px);
+
+    .headerContainer{
+        margin-bottom: 2rem;
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .iconContainer{
+            padding: 0.5rem;
+            border-radius: 1rem;
+            background-color: $color-secondary;
+
+            @include itemCenter();
+
+            .icon{
+                font-size: 3rem;
+                color: $color-primary;
+            }
+        }
+        .title{
+            flex: 1;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        .visibleIcon{
+            font-size: 2rem;
+            color: $color-text-grey;
+        }
+    }
+    .balance{
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    .footerContainer{
+        font-size: 1.3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .profitIn{
+            font-weight: 500;
+            color: $color-text-grey;
+        }
+        .profitValue{
+            font-weight: 600;
+            color: $color-green;            
+        }
+        .profitMargin{
+            padding: 0.5rem 0.7rem;
+            font-weight: 600;
+            border-radius: 1.8rem;
+            background-color: $color-green-light;
+            color: $color-green;
+        }
+    }
+}
