@@ -1,0 +1,90 @@
+@import '../../../style/utils/base';
+
+.cryptoCurrencyCard{
+    background-color: $color-white;
+    padding: 2.3rem;
+    border-radius: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .chartDetails{
+        flex: 1;
+        display: flex;
+        margin-bottom: 1rem;
+
+        .chartInfo{
+            .headerContainer{
+                margin-bottom: 2rem;
+
+                display: flex;
+                gap: 2rem;
+
+                .iconContainer{
+                    padding: 0.5rem;
+                    border-radius: 1rem;
+                    background-color: $color-secondary;
+        
+                    @include itemCenter();
+        
+                    .icon{
+                        font-size: 3rem;
+                        color: $color-primary;
+                    }
+                }
+                .cryptoType{
+                    h3{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        line-height: 1.3;
+                        text-transform: uppercase;
+                    }
+                    span{
+                        font-size: 1.3rem;
+                        line-height: 1.3;
+                        color: $color-text-grey;
+                    }
+                }
+            }
+            .balance{
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+        .chartContainer{
+            flex: 1;
+            background-color: rgba(255, 68, 0, 0.459);
+            @include itemCenter();
+
+            h4{
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .footerContainer{
+        font-size: 1.3rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .profitIn{
+            font-weight: 500;
+            color: $color-text-grey;
+        }
+        .profitValue{
+            font-weight: 600;
+            color: $color-green;            
+        }
+        .profitMargin{
+            padding: 0.5rem 0.7rem;
+            font-weight: 600;
+            border-radius: 1.8rem;
+            background-color: $color-green-light;
+            color: $color-green;
+        }
+    }
+}

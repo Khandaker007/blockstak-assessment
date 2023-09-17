@@ -1,11 +1,54 @@
 @import '../../style/utils/base';
 
 .dashboard{
-    height: 20rem;
+    height: 100%;
     width: 100%;
-    background-color: greenyellow;
+    padding: 2.8rem 3.2rem;
+    background-color: $color-secondary;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .balanceSection{
+        margin-bottom: 2.5rem;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+
+    .marketSection{
+        margin-bottom: 2.5rem;
+
+        display: grid;
+        grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+        gap: 2.5rem;
+
+        .boxChartContainer{
+            grid-column: col-start 1 / col-end 5;
+            height: 42.8rem;
+            background-color: $color-white;
+            
+            @include itemCenter();
+        }
+        .marketContainer{
+            grid-column: col-start 6 / col-end 8;
+        }
+    }
+
+    .otherContainers{
+        display: grid;
+        grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
+        gap: 2.5rem;
+
+        .assetsContainer{
+            grid-column: col-start 1 / col-end 2;
+            background-color: white;
+        }
+        .convertContainer{
+            grid-column: col-start 3 / col-end 4;
+            
+        }
+        .historyContainer{
+            grid-column: col-start 5 / col-end 8;
+
+        }
+    }
 }
