@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  CryptoCurrencyCard, TotalBalanceCard, MarketsCard, ConvertCard, HistoryCard
+  CryptoCurrencyCard, TotalBalanceCard, MarketsCard, ConvertCard, HistoryCard, AssetsCard
 } from '@/shared/components';
 
 import cryptoData from '@/assets/datas/cryptoCurrency';
@@ -21,13 +21,16 @@ const {
 } = style;
 
 const Dashboard = () => {
+  const data = [3, 6, 2, 7, 9, 10, 12];
+  const label = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
   return (
     <div className={dashboard}>
       <div className={balanceSection}>
         <TotalBalanceCard/>
-        <CryptoCurrencyCard/>
-        <CryptoCurrencyCard/>
-        <CryptoCurrencyCard/>
+        <CryptoCurrencyCard data={data} label={label} />
+        <CryptoCurrencyCard data={data} label={label}/>
+        <CryptoCurrencyCard data={data} label={label}/>
       </div>
       <div className={marketSection}>
         <div className={boxChartContainer}>
@@ -39,7 +42,7 @@ const Dashboard = () => {
       </div>
       <div className={otherContainers}>
         <div className={assetsContainer}>
-          <h3>Assets</h3>
+          <AssetsCard/>
         </div>
         <div className={convertContainer}>
           <ConvertCard/>

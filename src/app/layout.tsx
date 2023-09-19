@@ -3,6 +3,7 @@ import React from 'react';
 import '../style/globals.scss';
 import type { Metadata } from 'next';
 import { Layout } from '@/components';
+import { SidebarToggleProvider } from '@/providers/SidebarToggleProvider';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Layout>
-          {children}
-        </Layout>
+        <SidebarToggleProvider>
+          <Layout>
+            {children}
+          </Layout>
+        </SidebarToggleProvider>
       </body>
     </html>
   );

@@ -1,0 +1,39 @@
+@import '../../../style/utils/base';
+
+.assetsCard{
+    height: 100%;
+    background-color: $color-white;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .title{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .optionButton{
+            background-color: $color-white;
+            border: 1px solid $color-text-grey-light;
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+
+            @include itemCenter();
+            
+            .icon{
+                font-size: 2rem;
+                color: $color-text-grey-light;                
+            }
+        }
+    }
+    .chartContainer{
+        height: 23rem;
+
+        @include itemCenter();
+    }
+}

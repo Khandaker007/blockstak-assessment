@@ -3,6 +3,7 @@ import React from 'react';
 import { BiSolidWallet } from 'react-icons/bi';
 
 import style from './cryptoCurrencyCard.module.scss';
+import LineChart from '../LineChart/LineChart';
 const {
   cryptoCurrencyCard,
   chartDetails,
@@ -19,7 +20,7 @@ const {
   profitMargin
 } = style;
 
-const CryptoCurrencyCard = () => {
+const CryptoCurrencyCard = ({ data, label }: { data: number[], label: string[] }) => {
   return (
     <div className={cryptoCurrencyCard}>
       <div className={chartDetails}>
@@ -36,7 +37,7 @@ const CryptoCurrencyCard = () => {
           <h2 className={balance}>$123,987</h2>
         </div>
         <div className={chartContainer}>
-          <h4>Line Chart</h4>
+          <LineChart chartData={data} chartLabel={label}/>
         </div>
       </div>
       <div className={footerContainer}>

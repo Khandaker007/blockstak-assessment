@@ -1,10 +1,17 @@
-import React from 'react';
+'use client';
+
+import React, { useContext } from 'react';
 
 import { Navbar, Sidebar } from '@/shared/components';
+import { SidebarToggleContext } from '@/providers/SidebarToggleProvider';
 
 import style from './layout.module.scss';
 const {
-  layout, navbarContainer, sidebarContainer, mainContainer
+  layout,
+  navbarContainer,
+  sidebarContainer,
+  mainContainer,
+  tabSidebarContainer
 } = style;
 
 const Layout = ({
@@ -12,6 +19,8 @@ const Layout = ({
 }: {
   children: React.ReactNode
 }) => {
+  const { toggle } = useContext(SidebarToggleContext);
+
   return (
     <div className={layout}>
       <div className={navbarContainer}>
@@ -20,7 +29,7 @@ const Layout = ({
       <div className={mainContainer}>
         {children}
       </div>
-      <div className={sidebarContainer}>
+      <div className={toggle ? `${sidebarContainer} ${tabSidebarContainer}` : `${sidebarContainer}`}>
         <Sidebar/>
       </div>
     </div>
