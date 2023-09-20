@@ -12,6 +12,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2.5rem;
+        
+        @include response(s-desktop){
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     .marketSection{
@@ -27,9 +31,17 @@
             background-color: $color-white;
             
             @include itemCenter();
+            
+            @include response(s-desktop){
+                grid-column: col-start 1 / -1;
+            }
         }
         .marketContainer{
             grid-column: col-start 6 / col-end 8;
+
+            @include response(s-desktop){
+                grid-column: col-start 1 / -1;
+            }
         }
     }
 
@@ -37,18 +49,46 @@
         display: grid;
         grid-template-columns: repeat(8, [col-start] 1fr [col-end]);
         gap: 2.5rem;
+        
+        @include response(lg-desktop){
+            grid-template-columns: repeat(10, [col-start] 1fr [col-end]);
+        }
 
         .assetsContainer{
             grid-column: col-start 1 / col-end 2;
-            background-color: white;
+            
+            @include response(lg-desktop){
+                grid-column: col-start 1 / col-end 3;
+            }            
+            @include response(s-desktop){
+                grid-column: col-start 1 / col-end 5;                
+            }
+            @include response(phone){
+                grid-column: col-start 1 / -1;
+            }
         }
         .convertContainer{
             grid-column: col-start 3 / col-end 4;
             
+            @include response(lg-desktop){
+                grid-column: col-start 4 / col-end 6;
+            }
+            @include response(s-desktop){
+                grid-column: col-start 6 / col-end 10;                
+            }
+            @include response(phone){
+                grid-column: col-start 1 / -1;
+            }
         }
         .historyContainer{
             grid-column: col-start 5 / col-end 8;
-
+            
+            @include response(lg-desktop){
+                grid-column: col-start 7 / col-end 10;
+            }
+            @include response(s-desktop){
+                grid-column: col-start 1 / -1;                
+            }
         }
     }
 }

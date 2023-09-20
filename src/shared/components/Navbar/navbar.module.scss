@@ -9,6 +9,27 @@
   align-items: center;
   justify-content: space-between;
 
+  .menuBtn{
+    padding: 0.5rem;
+    background-color: $color-secondary;
+    border-radius: 0.3rem;
+    border: none;
+    margin-right: 2rem;
+    cursor: pointer;
+    @include itemCenter();
+
+    display: none;
+
+    @include response(vp-800){
+      display: inline;
+    }
+
+    .icon{
+      font-size: 2rem;
+      color: $color-primary;
+    }
+  }
+
   .searchContainer{
     flex: 1;
 

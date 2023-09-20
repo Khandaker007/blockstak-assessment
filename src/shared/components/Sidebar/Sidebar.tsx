@@ -1,21 +1,30 @@
-import React from 'react';
+'use client';
+
+import React, { useContext } from 'react';
 import Image from 'next/image';
 
 import logo from '@/assets/logo/logo.svg';
+import { SidebarToggleContext } from '@/providers/SidebarToggleProvider';
 
 import { BiSolidDashboard, BiTransferAlt } from 'react-icons/bi';
 import { MdCandlestickChart, MdHelpOutline, MdLogout } from 'react-icons/md';
 import { AiOutlineUser } from 'react-icons/ai';
 import { RiSettings5Fill } from 'react-icons/ri';
+import { RxCross2 } from 'react-icons/rx';
 
 import style from './sidebar.module.scss';
 const {
-  sidebar, logoContainer, navList, navItem, icon, divider, img, logout
+  sidebar, logoContainer, navList, navItem, icon, divider, img, logout, closeBtn
 } = style;
 
 const Sidebar = () => {
+  const { toggle, setToggle } = useContext(SidebarToggleContext);
+
   return (
     <div className={sidebar}>
+      <button className={closeBtn} onClick={() => setToggle(!toggle)}>
+        <RxCross2 className={icon}/>
+      </button>
       <div className={logoContainer}>
         <Image className={img} src={logo} alt='logo'/>
       </div>

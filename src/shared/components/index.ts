@@ -7,3 +7,5 @@ export * from './ButtonSmall';
 export * from './ConvertCard';
 export * from './ButtonLarge';
 export * from './HistoryCard';
+export * from './LineChart';
+export * from './AssetsCard';

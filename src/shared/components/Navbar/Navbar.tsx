@@ -1,10 +1,14 @@
-import React from 'react';
+'use client';
+
+import React, { useContext } from 'react';
 import Image from 'next/image';
 
-import { FiSearch } from 'react-icons/fi';
 import notification from '@/assets/icons/notification.svg';
 import userImg from '@/assets/images/user.png';
+import { SidebarToggleContext } from '@/providers/SidebarToggleProvider';
 
+import { FiSearch } from 'react-icons/fi';
+import { FaBarsStaggered } from 'react-icons/fa6';
 import style from './navbar.module.scss';
 const {
   navbar,
@@ -19,12 +23,18 @@ const {
   userName,
   userEmail,
   dotButton,
-  dot
+  dot,
+  menuBtn
 } = style;
 
 const Navbar = () => {
+  const { toggle, setToggle } = useContext(SidebarToggleContext);
+
   return (
     <div className={navbar}>
+      <button className={menuBtn} onClick={() => setToggle(!toggle)}>
+        <FaBarsStaggered className={icon}/>
+      </button>
       <div className={searchContainer}>
         <input type="text" placeholder='Search...'/>
         <FiSearch className={icon}/>

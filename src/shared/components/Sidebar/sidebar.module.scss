@@ -5,10 +5,38 @@
     width: max-content;
     padding: 4rem 4.5rem;
     border-right: 2px solid $color-text-grey-light;
+    background-color: $color-white;
+
+    .closeBtn{
+        padding: 0.5rem;
+        background-color: $color-secondary;
+        border-radius: 0.3rem;
+        border: none;
+        cursor: pointer;
+        @include itemCenter();
+        display: none;
+        
+        @include response(vp-800){
+            display: inline;
+
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        .icon{
+            font-size: 2rem;
+            color: $color-primary;
+        }
+    }
 
     .logoContainer{
         height: 3.2rem;
         margin-bottom: 7.5rem;
+
+        @include response(vp-800){
+            margin-top: 4rem;
+        }
 
         .img{
             height: 100%;
